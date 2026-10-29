@@ -87,7 +87,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | 1 | Setup project | ✅ | — |
 | 2 | Layout dasar & navigasi | ✅ | Sedang |
 | 3 | Hero & About | ✅ | Sedang |
-| 4 | Projects section (home) | ⬜ | Sedang |
+| 4 | Projects section (home) | ✅ | Sedang |
 | 5 | Halaman detail proyek (MDX) | ⬜ | Berat |
 | 6 | Experience & Contact | ⬜ | Ringan |
 | 7 | Animasi & polish | ⬜ | Berat |
@@ -133,9 +133,9 @@ Selesai jika: Hero & About tampil rapi di mobile dan desktop dalam dua bahasa.
 
 ---
 
-### ⬜ Batch 4 — Projects section (home)
+### ✅ Batch 4 — Projects section (home)
 Tugas:
-- [ ] Model data di `src/data/projects.ts`:
+- [x] Model data di `src/data/projects.ts`:
   ```ts
   type Project = {
     slug: string;
@@ -149,10 +149,10 @@ Tugas:
     role: { id: string; en: string };
   };
   ```
-- [ ] 5 proyek **dummy** (gambar placeholder di `public/images/projects/`)
-- [ ] `project-card.tsx` — cover, judul, ringkasan, badge stack; hover: zoom cover + border glow emerald
-- [ ] Grid **bento** (proyek featured lebih besar), responsif
-- [ ] Klik kartu → `Link` ke `/projects/[slug]` (dari `@/i18n/navigation`)
+- [x] 5 proyek **dummy** (gambar placeholder di `public/images/projects/`)
+- [x] `project-card.tsx` — cover, judul, ringkasan, badge stack; hover: zoom cover + border glow emerald
+- [x] Grid **bento** (proyek featured lebih besar), responsif
+- [x] Klik kartu → `Link` ke `/projects/[slug]` (dari `@/i18n/navigation`)
 
 Selesai jika: 5 kartu tampil, link mengarah ke URL detail yang benar.
 
@@ -219,4 +219,5 @@ Tugas:
 | 2026-10-29 | 1 | Setup selesai, palet Cyber Emerald diterapkan |
 | 2026-10-29 | 2 | Layout dasar, Navbar sticky + active spy, Language Switcher, Smooth Scroll (Lenis), Footer & kerangka semua section selesai |
 | 2026-10-29 | 3 | Hero (badge neon, grid + cursor spotlight, CTA, system card) & About (foto placeholder, bio, metrik neon, tech stack 4 kategori) selesai |
+| 2026-10-29 | 4 | Data 5 proyek bilingual (`projects.ts`), ilustrasi cover SVG, `ProjectCard` (hover zoom + emerald glow), & Bento Grid responsif selesai |
 

@@ -57,12 +57,15 @@
       "tools": "DevOps & Tools"
     }
   },
+  "Projects": {
+    "label": "02 / Karya Pilihan",
+    "title": "Proyek Unggulan",
+    "subtitle": "Pilihan sistem web, portal enterprise, dan middleware yang saya rancang serta kembangkan dari awal hingga produksi.",
+    "featuredBadge": "Unggulan",
+    "stackLabel": "Teknologi yang digunakan",
+    "viewDetail": "Baca studi kasus"
+  },
   "Sections": {
-    "projects": {
-      "label": "02 / Karya Pilihan",
-      "title": "Proyek Unggulan",
-      "placeholder": "Kerangka section Projects (akan diisi 5 kartu bento pada Batch 4)."
-    },
     "experience": {
       "label": "03 / Perjalanan",
       "title": "Pengalaman",

@@ -57,12 +57,15 @@
       "tools": "DevOps & Tools"
     }
   },
+  "Projects": {
+    "label": "02 / Selected Work",
+    "title": "Featured Projects",
+    "subtitle": "A selection of web systems, enterprise portals, and middlewares designed and built from architecture to production.",
+    "featuredBadge": "Featured",
+    "stackLabel": "Technologies used",
+    "viewDetail": "Read case study"
+  },
   "Sections": {
-    "projects": {
-      "label": "02 / Selected Work",
-      "title": "Featured Projects",
-      "placeholder": "Projects section skeleton (to be populated with 5 bento cards in Batch 4)."
-    },
     "experience": {
       "label": "03 / Journey",
       "title": "Experience",
