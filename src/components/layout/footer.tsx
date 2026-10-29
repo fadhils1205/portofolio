@@ -1,23 +1,27 @@
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/icons";
+import { profile } from "@/data/profile";
 import { Mail } from "lucide-react";
 
 const SOCIAL_LINKS = [
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: profile.socials.github,
     icon: GitHubIcon,
+    external: true,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: profile.socials.linkedin,
     icon: LinkedInIcon,
+    external: true,
   },
   {
     name: "Email",
-    href: "mailto:hello@fadhil.dev",
+    href: profile.socials.email,
     icon: Mail,
+    external: false,
   },
 ] as const;
 
@@ -45,8 +49,8 @@ export function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
                   aria-label={item.name}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-muted transition-colors hover:border-accent/50 hover:text-accent-neon"
                 >
@@ -56,7 +60,7 @@ export function Footer() {
             })}
           </div>
           <p className="font-mono text-xs text-subtle">
-            © {currentYear} Fadhil. {t("rights")}
+            © {currentYear} {profile.shortName}. {t("rights")}
           </p>
         </div>
       </Container>

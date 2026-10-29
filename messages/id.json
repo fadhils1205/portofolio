@@ -18,17 +18,46 @@
     "rights": "Hak cipta dilindungi.",
     "builtWith": "Dibangun dengan Next.js, Tailwind CSS & Motion."
   },
+  "Hero": {
+    "available": "Tersedia untuk proyek & kolaborasi",
+    "greeting": "00 / Perkenalan",
+    "rolePrefix": "Seorang",
+    "tagline": "Merancang dan membangun aplikasi web end-to-end yang cepat, terukur, dan rapi—mulai dari arsitektur database dan REST API hingga antarmuka modern yang interaktif.",
+    "ctaProjects": "Lihat Proyek",
+    "ctaCv": "Unduh CV",
+    "connectLabel": "Terhubung",
+    "cardRoleLabel": "Peran",
+    "cardFocusLabel": "Fokus",
+    "cardFocusValue": "Web Apps & Internal Systems",
+    "cardStackLabel": "Stack Utama",
+    "cardStatusLabel": "Status",
+    "cardStatusValue": "Siap bekerja",
+    "cardCommand": "fokus pada arsitektur bersih, performa, dan solusi berdampak nyata."
+  },
+  "About": {
+    "label": "01 / Tentang & Stack",
+    "title": "Membangun Sistem yang Tangguh & Mudah Dipelihara",
+    "subtitle": "Perpaduan antara ketelitian rekayasa backend dan perhatian penuh pada pengalaman pengguna di sisi frontend.",
+    "bio1": "Halo! Saya Fadhil, seorang Fullstack Developer yang senang mengubah proses bisnis yang kompleks menjadi aplikasi web yang bersih, cepat, dan andal.",
+    "bio2": "Pengalaman saya mencakup pengembangan sistem operasional internal, portal autentikasi terpusat (SSO), middleware pemantauan real-time, hingga antarmuka analitik berbasis data.",
+    "bio3": "Saya terbiasa menangani siklus pengembangan secara menyeluruh: merancang skema database relasional, menyusun API yang aman dan terdokumentasi, hingga menerjemahkannya ke UI yang responsif dan nyaman digunakan.",
+    "metrics": {
+      "projects": "Proyek Selesai",
+      "experience": "Tahun Pengalaman",
+      "stack": "Teknologi Dikuasai",
+      "commitment": "Fokus Kualitas"
+    },
+    "stackLabel": "Perangkat Teknis",
+    "stackTitle": "Tech Stack & Ekosistem",
+    "stackSubtitle": "Dikelompokkan berdasarkan lapisan arsitektur",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database & ORM",
+      "tools": "DevOps & Tools"
+    }
+  },
   "Sections": {
-    "hero": {
-      "label": "00 / Perkenalan",
-      "title": "Fadhil — Fullstack Developer",
-      "placeholder": "Kerangka section Hero (akan diisi lengkap pada Batch 3)."
-    },
-    "about": {
-      "label": "01 / Tentang & Stack",
-      "title": "Tentang Saya",
-      "placeholder": "Kerangka section About & Tech Stack (akan diisi lengkap pada Batch 3)."
-    },
     "projects": {
       "label": "02 / Karya Pilihan",
       "title": "Proyek Unggulan",

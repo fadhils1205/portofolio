@@ -18,17 +18,46 @@
     "rights": "All rights reserved.",
     "builtWith": "Built with Next.js, Tailwind CSS & Motion."
   },
+  "Hero": {
+    "available": "Available for work & collaboration",
+    "greeting": "00 / Introduction",
+    "rolePrefix": "A",
+    "tagline": "Designing and building fast, scalable, and maintainable end-to-end web applications—from relational database architecture and REST APIs to interactive modern interfaces.",
+    "ctaProjects": "View Projects",
+    "ctaCv": "Download CV",
+    "connectLabel": "Connect",
+    "cardRoleLabel": "Role",
+    "cardFocusLabel": "Focus",
+    "cardFocusValue": "Web Apps & Internal Systems",
+    "cardStackLabel": "Core Stack",
+    "cardStatusLabel": "Status",
+    "cardStatusValue": "Open to work",
+    "cardCommand": "focused on clean architecture, performance, and real-world impact."
+  },
+  "About": {
+    "label": "01 / About & Stack",
+    "title": "Engineering Reliable & Maintainable Web Systems",
+    "subtitle": "Combining backend engineering precision with a sharp eye for frontend user experience.",
+    "bio1": "Hello! I'm Fadhil, a Fullstack Developer who enjoys turning complex business workflows into clean, fast, and dependable web applications.",
+    "bio2": "My work spans internal operational systems, centralized authentication portals (SSO), real-time tracking middlewares, and data-driven monitoring dashboards.",
+    "bio3": "I'm comfortable owning the full development lifecycle: designing relational database schemas, building secure and well-structured APIs, and crafting responsive, intuitive interfaces.",
+    "metrics": {
+      "projects": "Projects Shipped",
+      "experience": "Years of Experience",
+      "stack": "Technologies Used",
+      "commitment": "Quality Commitment"
+    },
+    "stackLabel": "Technical Arsenal",
+    "stackTitle": "Tech Stack & Ecosystem",
+    "stackSubtitle": "Grouped by architectural layer",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database & ORM",
+      "tools": "DevOps & Tools"
+    }
+  },
   "Sections": {
-    "hero": {
-      "label": "00 / Introduction",
-      "title": "Fadhil — Fullstack Developer",
-      "placeholder": "Hero section skeleton (to be completed in Batch 3)."
-    },
-    "about": {
-      "label": "01 / About & Stack",
-      "title": "About Me",
-      "placeholder": "About & Tech Stack section skeleton (to be completed in Batch 3)."
-    },
     "projects": {
       "label": "02 / Selected Work",
       "title": "Featured Projects",

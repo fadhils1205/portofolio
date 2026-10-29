@@ -86,7 +86,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 |---|---|---|---|
 | 1 | Setup project | ✅ | — |
 | 2 | Layout dasar & navigasi | ✅ | Sedang |
-| 3 | Hero & About | ⬜ | Sedang |
+| 3 | Hero & About | ✅ | Sedang |
 | 4 | Projects section (home) | ⬜ | Sedang |
 | 5 | Halaman detail proyek (MDX) | ⬜ | Berat |
 | 6 | Experience & Contact | ⬜ | Ringan |
@@ -120,14 +120,14 @@ Selesai jika: navigasi & ganti bahasa berfungsi di desktop + mobile, build sukse
 
 ---
 
-### ⬜ Batch 3 — Hero & About
+### ✅ Batch 3 — Hero & About
 Tugas:
-- [ ] **Hero:** nama, role "Fullstack Developer", tagline, CTA (*Lihat Proyek* → `#projects`, *Download CV* → `/cv.pdf`), ikon GitHub/LinkedIn/Email
-- [ ] Badge status **"Available for work"** dengan titik `accent-neon` berdenyut
-- [ ] Latar Hero: grid/dot pattern halus + spotlight emerald mengikuti kursor
-- [ ] **About:** foto (placeholder), 2–3 paragraf, beberapa metrik (mis. tahun pengalaman, jumlah proyek) dengan `font-mono text-accent-neon`
-- [ ] Tech stack dikelompokkan: Frontend / Backend / Database / Tools (data di `src/data/tech-stack.ts`)
-- [ ] Data profil di `src/data/profile.ts` (nama, email, sosial, URL CV)
+- [x] **Hero:** nama, role "Fullstack Developer", tagline, CTA (*Lihat Proyek* → `#projects`, *Download CV* → `/cv.pdf`), ikon GitHub/LinkedIn/Email
+- [x] Badge status **"Available for work"** dengan titik `accent-neon` berdenyut
+- [x] Latar Hero: grid/dot pattern halus + spotlight emerald mengikuti kursor
+- [x] **About:** foto (placeholder), 2–3 paragraf, beberapa metrik (mis. tahun pengalaman, jumlah proyek) dengan `font-mono text-accent-neon`
+- [x] Tech stack dikelompokkan: Frontend / Backend / Database / Tools (data di `src/data/tech-stack.ts`)
+- [x] Data profil di `src/data/profile.ts` (nama, email, sosial, URL CV)
 
 Selesai jika: Hero & About tampil rapi di mobile dan desktop dalam dua bahasa.
 
@@ -140,8 +140,8 @@ Tugas:
   type Project = {
     slug: string;
     year: number;
-    featured: boolean;            // kartu besar di bento
-    cover: string;                // /images/projects/<slug>/cover.png
+    featured: boolean;           
+    cover: string;                
     stack: string[];
     links: { demo?: string; repo?: string };
     title: { id: string; en: string };
@@ -218,4 +218,5 @@ Tugas:
 |---|---|---|
 | 2026-10-29 | 1 | Setup selesai, palet Cyber Emerald diterapkan |
 | 2026-10-29 | 2 | Layout dasar, Navbar sticky + active spy, Language Switcher, Smooth Scroll (Lenis), Footer & kerangka semua section selesai |
+| 2026-10-29 | 3 | Hero (badge neon, grid + cursor spotlight, CTA, system card) & About (foto placeholder, bio, metrik neon, tech stack 4 kategori) selesai |
 
