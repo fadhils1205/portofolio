@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Section } from "@/components/ui/section";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { profile } from "@/data/profile";
 import { techStack } from "@/data/tech-stack";
 import { Code2, Database, Layers, Wrench, MapPin } from "lucide-react";
@@ -25,8 +27,8 @@ export function AboutSection() {
       {/* Top Grid: Photo + Narrative + Metrics */}
       <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
         {/* Left: Portrait / Profile Card */}
-        <div className="lg:col-span-4">
-          <div className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-3 transition-colors hover:border-accent/40">
+        <Reveal className="lg:col-span-4">
+          <SpotlightCard className="group rounded-2xl border border-border bg-surface p-3 transition-colors hover:border-accent/40">
             <div className="relative aspect-[5/6] w-full overflow-hidden rounded-xl bg-surface-2">
               <Image
                 src={profile.avatar}
@@ -49,39 +51,38 @@ export function AboutSection() {
                 {profile.location}
               </span>
             </div>
-          </div>
-        </div>
+          </SpotlightCard>
+        </Reveal>
 
         {/* Right: Bio Paragraphs & Metrics */}
         <div className="flex flex-col justify-between space-y-8 lg:col-span-8">
-          <div className="space-y-4 text-base leading-relaxed text-muted">
+          <Reveal delay={0.08} className="space-y-4 text-base leading-relaxed text-muted">
             <p className="text-foreground/95 font-medium">{t("bio1")}</p>
             <p>{t("bio2")}</p>
             <p>{t("bio3")}</p>
-          </div>
+          </Reveal>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <StaggerGroup className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {profile.metrics.map((metric) => (
-              <div
-                key={metric.key}
-                className="rounded-2xl border border-border bg-surface/80 p-4 transition-colors hover:border-accent/40"
-              >
-                <p className="font-mono text-2xl font-semibold tracking-tight text-accent-neon sm:text-3xl">
-                  {metric.value}
-                </p>
-                <p className="mt-1 text-xs text-muted">
-                  {t(`metrics.${metric.key}`)}
-                </p>
-              </div>
+              <StaggerItem key={metric.key}>
+                <SpotlightCard className="h-full rounded-2xl border border-border bg-surface/80 p-4 transition-colors hover:border-accent/40">
+                  <p className="font-mono text-2xl font-semibold tracking-tight text-accent-neon sm:text-3xl">
+                    {metric.value}
+                  </p>
+                  <p className="mt-1 text-xs text-muted">
+                    {t(`metrics.${metric.key}`)}
+                  </p>
+                </SpotlightCard>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
         </div>
       </div>
 
       {/* Bottom: Grouped Tech Stack */}
       <div className="mt-16 space-y-6">
-        <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+        <Reveal className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
           <div>
             <p className="font-mono text-xs uppercase tracking-widest text-accent">
               {t("stackLabel")}
@@ -91,49 +92,48 @@ export function AboutSection() {
             </h3>
           </div>
           <p className="font-mono text-xs text-subtle">{t("stackSubtitle")}</p>
-        </div>
+        </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {techStack.map((group) => {
             const Icon = CATEGORY_ICONS[group.category];
             return (
-              <div
-                key={group.category}
-                className="flex flex-col rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40"
-              >
-                <div className="mb-4 flex items-center justify-between border-b border-border/80 pb-3">
-                  <div className="flex items-center gap-2.5">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-accent-glow text-accent-neon">
-                      <Icon className="h-4 w-4" />
+              <StaggerItem key={group.category}>
+                <SpotlightCard className="flex h-full flex-col rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40">
+                  <div className="mb-4 flex items-center justify-between border-b border-border/80 pb-3">
+                    <div className="flex items-center gap-2.5">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-accent-glow text-accent-neon">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <h4 className="text-sm font-semibold text-foreground">
+                        {t(`categories.${group.category}`)}
+                      </h4>
+                    </div>
+                    <span className="font-mono text-xs text-subtle">
+                      0{techStack.indexOf(group) + 1}
                     </span>
-                    <h4 className="text-sm font-semibold text-foreground">
-                      {t(`categories.${group.category}`)}
-                    </h4>
                   </div>
-                  <span className="font-mono text-xs text-subtle">
-                    0{techStack.indexOf(group) + 1}
-                  </span>
-                </div>
 
-                <ul className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <li
-                      key={item.name}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/80 px-2.5 py-1.5 text-xs text-foreground transition-colors hover:border-accent/40"
-                    >
-                      <span>{item.name}</span>
-                      {item.tag && (
-                        <span className="font-mono text-[10px] text-accent">
-                          {item.tag}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  <ul className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <li
+                        key={item.name}
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-2/80 px-2.5 py-1.5 text-xs text-foreground transition-colors hover:border-accent/40"
+                      >
+                        <span>{item.name}</span>
+                        {item.tag && (
+                          <span className="font-mono text-[10px] text-accent">
+                            {item.tag}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </SpotlightCard>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerGroup>
       </div>
     </Section>
   );

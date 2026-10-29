@@ -6,6 +6,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { routing } from "@/i18n/routing";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import "../globals.css";
@@ -43,6 +44,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="flex min-h-dvh flex-col bg-background text-foreground">
         <NextIntlClientProvider>
           <SmoothScrollProvider>
+            <ScrollProgress />
             <Navbar />
             <div className="flex-1">{children}</div>
             <Footer />

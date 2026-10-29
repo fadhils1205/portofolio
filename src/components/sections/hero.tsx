@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/icons";
+import { Reveal } from "@/components/ui/reveal";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { HeroSpotlight } from "./hero-spotlight";
 import { profile } from "@/data/profile";
 import { ArrowDownRight, Download, Mail, Terminal } from "lucide-react";
@@ -41,18 +43,20 @@ export function HeroSection() {
             {/* Left column: primary intro */}
             <div className="space-y-8 lg:col-span-8">
               {/* Available for work badge */}
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-glow px-3.5 py-1.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-neon opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-neon" />
-                </span>
-                <span className="font-mono text-xs font-medium tracking-wide text-accent-neon">
-                  {t("available")}
-                </span>
-              </div>
+              <Reveal delay={0.02}>
+                <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-glow px-3.5 py-1.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-neon opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-neon" />
+                  </span>
+                  <span className="font-mono text-xs font-medium tracking-wide text-accent-neon">
+                    {t("available")}
+                  </span>
+                </div>
+              </Reveal>
 
               {/* Heading & Role */}
-              <div className="space-y-4">
+              <Reveal delay={0.08} className="space-y-4">
                 <p className="font-mono text-xs uppercase tracking-widest text-accent">
                   {t("greeting")} — {profile.location}
                 </p>
@@ -65,18 +69,20 @@ export function HeroSection() {
                     </span>
                   </span>
                 </h1>
-              </div>
+              </Reveal>
 
               {/* Tagline */}
-              <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-                {t("tagline")}
-              </p>
+              <Reveal delay={0.14}>
+                <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+                  {t("tagline")}
+                </p>
+              </Reveal>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <Reveal delay={0.2} className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="#projects"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-background transition-all hover:bg-accent-neon focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-background transition-all hover:bg-accent-neon"
                 >
                   <span>{t("ctaProjects")}</span>
                   <ArrowDownRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
@@ -85,15 +91,15 @@ export function HeroSection() {
                 <a
                   href={profile.cvUrl}
                   download
-                  className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent/50 hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent/50 hover:bg-surface-2"
                 >
                   <Download className="h-4 w-4 text-accent" />
                   <span>{t("ctaCv")}</span>
                 </a>
-              </div>
+              </Reveal>
 
               {/* Social Links */}
-              <div className="flex items-center gap-4 pt-2">
+              <Reveal delay={0.26} className="flex items-center gap-4 pt-2">
                 <span className="font-mono text-xs uppercase tracking-wider text-subtle">
                   {t("connectLabel")}
                 </span>
@@ -115,12 +121,12 @@ export function HeroSection() {
                     );
                   })}
                 </div>
-              </div>
+              </Reveal>
             </div>
 
             {/* Right column: engineering status card */}
-            <div className="lg:col-span-4">
-              <div className="rounded-2xl border border-border bg-surface/85 p-6 backdrop-blur-sm shadow-[0_0_40px_-15px_var(--color-accent-glow)]">
+            <Reveal delay={0.18} className="lg:col-span-4">
+              <SpotlightCard className="rounded-2xl border border-border bg-surface/85 p-6 backdrop-blur-sm shadow-[0_0_40px_-15px_var(--color-accent-glow)]">
                 <div className="flex items-center justify-between border-b border-border pb-4">
                   <div className="flex items-center gap-2">
                     <Terminal className="h-4 w-4 text-accent" />
@@ -158,8 +164,8 @@ export function HeroSection() {
                 <div className="mt-6 rounded-xl border border-border/80 bg-background/60 p-3.5 font-mono text-[11px] leading-relaxed text-muted">
                   <span className="text-accent">$</span> {t("cardCommand")}
                 </div>
-              </div>
-            </div>
+              </SpotlightCard>
+            </Reveal>
           </div>
         </Container>
       </HeroSpotlight>

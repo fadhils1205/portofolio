@@ -7,6 +7,8 @@ import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Container } from "@/components/ui/container";
 import { GitHubIcon } from "@/components/ui/icons";
+import { Reveal } from "@/components/ui/reveal";
+import { SharedProjectCover } from "@/components/ui/shared-project-cover";
 import { ProjectGallery } from "@/components/sections/project-gallery";
 import {
   getAdjacentProjects,
@@ -186,8 +188,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             )}
           </div>
 
-          {/* Hero Cover Image */}
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_0_50px_-15px_var(--color-accent-glow)]">
+          {/* Hero Cover Image with shared layout transition */}
+          <SharedProjectCover
+            slug={project.slug}
+            className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_0_50px_-15px_var(--color-accent-glow)]"
+          >
             <Image
               src={project.cover}
               alt={title}
@@ -196,18 +201,20 @@ export default async function ProjectDetailPage({ params }: Props) {
               sizes="(max-width: 1200px) 100vw, 1152px"
               className="object-cover"
             />
-          </div>
+          </SharedProjectCover>
         </header>
 
         {/* MDX Case Study Body */}
-        <article className="mx-auto mt-14 max-w-3xl">
-          <Content />
+        <Reveal delay={0.1}>
+          <article className="mx-auto mt-14 max-w-3xl">
+            <Content />
 
-          {/* Screenshot Gallery */}
-          {project.screenshots && (
-            <ProjectGallery screenshots={project.screenshots} />
-          )}
-        </article>
+            {/* Screenshot Gallery */}
+            {project.screenshots && (
+              <ProjectGallery screenshots={project.screenshots} />
+            )}
+          </article>
+        </Reveal>
 
         {/* Previous / Next Project Navigation */}
         {(prev || next) && (

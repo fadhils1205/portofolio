@@ -90,7 +90,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | 4 | Projects section (home) | ✅ | Sedang |
 | 5 | Halaman detail proyek (MDX) | ✅ | Berat |
 | 6 | Experience & Contact | ✅ | Ringan |
-| 7 | Animasi & polish | ⬜ | Berat |
+| 7 | Animasi & polish | ✅ | Berat |
 | 8 | SEO & persiapan deploy | ⬜ | Ringan |
 | 9 | Isi konten asli | ⬜ | Ringan |
 
@@ -182,14 +182,14 @@ Selesai jika: kedua section lengkap & responsif.
 
 ---
 
-### ⬜ Batch 7 — Animasi & polish
+### ✅ Batch 7 — Animasi & polish
 Tugas:
-- [ ] Komponen `reveal.tsx` (fade + slide saat masuk viewport, `motion/react`)
-- [ ] Stagger untuk kartu proyek & tech stack
-- [ ] Efek spotlight/glow pada kartu mengikuti kursor
-- [ ] Transisi kartu → halaman detail (mis. View Transitions API atau `layoutId`)
-- [ ] Progress bar scroll di atas halaman (opsional)
-- [ ] Cek `prefers-reduced-motion`, fokus keyboard, kontras, ukuran mobile
+- [x] Komponen `reveal.tsx` (fade + slide saat masuk viewport, `motion/react`)
+- [x] Stagger untuk kartu proyek & tech stack
+- [x] Efek spotlight/glow pada kartu mengikuti kursor
+- [x] Transisi kartu → halaman detail (mis. View Transitions API atau `layoutId`)
+- [x] Progress bar scroll di atas halaman (opsional)
+- [x] Cek `prefers-reduced-motion`, fokus keyboard, kontras, ukuran mobile
 
 Selesai jika: animasi terasa halus, tidak ada layout shift, Lighthouse performa ≥ 90.
 
@@ -222,4 +222,5 @@ Tugas:
 | 2026-10-29 | 4 | Data 5 proyek bilingual (`projects.ts`), ilustrasi cover SVG, `ProjectCard` (hover zoom + emerald glow), & Bento Grid responsif selesai |
 | 2026-10-29 | 5 | Integrasi `@next/mdx`, `mdx-components.tsx`, 10 file MDX studi kasus (`id` & `en`), halaman detail `/projects/[slug]`, galeri screenshot + lightbox, navigasi prev/next, & halaman `not-found` selesai |
 | 2026-10-29 | 6 | Data `experience.ts`, `ExperienceSection` (timeline vertikal emerald), `ContactSection` (CTA besar, kanal sosial, & `CopyEmailButton` ke clipboard) selesai |
+| 2026-10-29 | 7 | Animasi & polish: `Reveal`/`StaggerGroup` (`motion/react`), `SpotlightCard`, transisi cover `layoutId` (`SharedProjectCover`), `ScrollProgress` bar, focus ring & `prefers-reduced-motion` selesai |
 

@@ -1,5 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Section } from "@/components/ui/section";
+import { StaggerGroup, StaggerItem } from "@/components/ui/reveal";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import type { Locale } from "@/i18n/routing";
 import { experiences } from "@/data/experience";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
@@ -22,7 +24,7 @@ export function ExperienceSection() {
           className="absolute top-2 bottom-2 left-3 w-px bg-gradient-to-b from-accent via-border to-transparent sm:left-4"
         />
 
-        <ol className="space-y-10">
+        <StaggerGroup className="space-y-10">
           {experiences.map((item) => {
             const period = item.period[locale];
             const role = item.role[locale];
@@ -32,7 +34,7 @@ export function ExperienceSection() {
             const highlights = item.highlights[locale];
 
             return (
-              <li key={item.id} className="relative pl-10 sm:pl-14">
+              <StaggerItem key={item.id} className="relative pl-10 sm:pl-14">
                 {/* Timeline Node / Dot */}
                 <span
                   aria-hidden="true"
@@ -49,7 +51,7 @@ export function ExperienceSection() {
                 </span>
 
                 {/* Card */}
-                <div className="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent/50 hover:bg-surface-2/40 hover:shadow-[0_0_32px_-12px_var(--color-accent-glow)]">
+                <SpotlightCard className="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent/50 hover:bg-surface-2/40 hover:shadow-[0_0_32px_-12px_var(--color-accent-glow)]">
                   {/* Top metadata row */}
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/70 pb-4">
                     <div className="inline-flex items-center gap-2 font-mono text-xs text-accent-neon">
@@ -120,11 +122,11 @@ export function ExperienceSection() {
                       </span>
                     ))}
                   </div>
-                </div>
-              </li>
+                </SpotlightCard>
+              </StaggerItem>
             );
           })}
-        </ol>
+        </StaggerGroup>
       </div>
     </Section>
   );

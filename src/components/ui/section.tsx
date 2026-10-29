@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
+import { Reveal } from "./reveal";
 import type { ReactNode } from "react";
 
 type SectionProps = {
@@ -31,7 +32,7 @@ export function Section({
     >
       <Container className={containerClassName}>
         {(label || title || subtitle) && (
-          <header className="mb-12 max-w-2xl space-y-3">
+          <Reveal className="mb-12 max-w-2xl space-y-3">
             {label && (
               <p className="font-mono text-xs uppercase tracking-widest text-accent">
                 {label}
@@ -47,11 +48,10 @@ export function Section({
                 {subtitle}
               </p>
             )}
-          </header>
+          </Reveal>
         )}
         {children}
       </Container>
     </section>
   );
 }
-
