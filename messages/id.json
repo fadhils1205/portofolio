@@ -82,21 +82,27 @@
     "prevProject": "Proyek Sebelumnya",
     "nextProject": "Proyek Berikutnya"
   },
+  "Experience": {
+    "label": "03 / Perjalanan",
+    "title": "Pengalaman & Jejak Rekayasa",
+    "subtitle": "Riwayat peran profesional, proyek industri, dan pengembangan sistem informasi yang pernah saya jalani.",
+    "currentBadge": "Aktif"
+  },
+  "Contact": {
+    "label": "04 / Hubungi",
+    "title": "Mari Berkolaborasi",
+    "subtitle": "Punya ide proyek, butuh pengembangan sistem web internal, atau sekadar ingin berdiskusi soal teknis? Silakan hubungi saya.",
+    "statusBadge": "Siap menerima peluang baru",
+    "ctaHeading": "Siap membangun sistem web berikutnya bersama Anda.",
+    "ctaBody": "Saya terbuka untuk peran Fullstack Developer penuh waktu, kontrak proyek, maupun kolaborasi teknis. Kirimkan pesan melalui email atau terhubung lewat kanal di samping.",
+    "directEmailLabel": "Email Langsung",
+    "sendEmailBtn": "Kirim Email",
+    "copyEmailBtn": "Salin Email",
+    "copiedEmailBtn": "Email Disalin!"
+  },
   "NotFound": {
     "title": "Halaman Tidak Ditemukan",
     "description": "Maaf, halaman atau proyek yang Anda cari tidak tersedia atau telah dipindahkan.",
     "backHome": "Kembali ke Beranda"
-  },
-  "Sections": {
-    "experience": {
-      "label": "03 / Perjalanan",
-      "title": "Pengalaman",
-      "placeholder": "Kerangka section Experience (akan diisi timeline pada Batch 6)."
-    },
-    "contact": {
-      "label": "04 / Hubungi",
-      "title": "Mari Berkolaborasi",
-      "placeholder": "Kerangka section Contact (akan diisi lengkap pada Batch 6)."
-    }
   }
 }

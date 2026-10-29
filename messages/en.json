@@ -82,21 +82,27 @@
     "prevProject": "Previous Project",
     "nextProject": "Next Project"
   },
+  "Experience": {
+    "label": "03 / Journey",
+    "title": "Experience & Engineering Track",
+    "subtitle": "Professional roles, industrial projects, and information system engineering milestones along my journey.",
+    "currentBadge": "Active"
+  },
+  "Contact": {
+    "label": "04 / Contact",
+    "title": "Let's Collaborate",
+    "subtitle": "Have a project in mind, need an internal web system built, or want to discuss engineering opportunities? Reach out anytime.",
+    "statusBadge": "Open for new opportunities",
+    "ctaHeading": "Ready to build your next web system together.",
+    "ctaBody": "I'm available for full-time Fullstack Developer roles, contract projects, and technical collaborations. Send an email directly or connect through the channels alongside.",
+    "directEmailLabel": "Direct Email",
+    "sendEmailBtn": "Send Email",
+    "copyEmailBtn": "Copy Email",
+    "copiedEmailBtn": "Email Copied!"
+  },
   "NotFound": {
     "title": "Page Not Found",
     "description": "Sorry, the page or project you are looking for does not exist or has been moved.",
     "backHome": "Back to Home"
-  },
-  "Sections": {
-    "experience": {
-      "label": "03 / Journey",
-      "title": "Experience",
-      "placeholder": "Experience section skeleton (to be populated with timeline in Batch 6)."
-    },
-    "contact": {
-      "label": "04 / Contact",
-      "title": "Let's Collaborate",
-      "placeholder": "Contact section skeleton (to be completed in Batch 6)."
-    }
   }
 }

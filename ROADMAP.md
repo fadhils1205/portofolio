@@ -89,7 +89,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | 3 | Hero & About | ✅ | Sedang |
 | 4 | Projects section (home) | ✅ | Sedang |
 | 5 | Halaman detail proyek (MDX) | ✅ | Berat |
-| 6 | Experience & Contact | ⬜ | Ringan |
+| 6 | Experience & Contact | ✅ | Ringan |
 | 7 | Animasi & polish | ⬜ | Berat |
 | 8 | SEO & persiapan deploy | ⬜ | Ringan |
 | 9 | Isi konten asli | ⬜ | Ringan |
@@ -172,11 +172,11 @@ Selesai jika: kelima proyek punya halaman detail statis di dua bahasa.
 
 ---
 
-### ⬜ Batch 6 — Experience & Contact
+### ✅ Batch 6 — Experience & Contact
 Tugas:
-- [ ] Data `src/data/experience.ts` (periode, posisi, perusahaan, deskripsi — bilingual)
-- [ ] Timeline vertikal dengan garis & titik emerald
-- [ ] Contact: ajakan singkat, email (tombol salin ke clipboard), link sosial, CTA besar
+- [x] Data `src/data/experience.ts` (periode, posisi, perusahaan, deskripsi — bilingual)
+- [x] Timeline vertikal dengan garis & titik emerald
+- [x] Contact: ajakan singkat, email (tombol salin ke clipboard), link sosial, CTA besar
 
 Selesai jika: kedua section lengkap & responsif.
 
@@ -221,4 +221,5 @@ Tugas:
 | 2026-10-29 | 3 | Hero (badge neon, grid + cursor spotlight, CTA, system card) & About (foto placeholder, bio, metrik neon, tech stack 4 kategori) selesai |
 | 2026-10-29 | 4 | Data 5 proyek bilingual (`projects.ts`), ilustrasi cover SVG, `ProjectCard` (hover zoom + emerald glow), & Bento Grid responsif selesai |
 | 2026-10-29 | 5 | Integrasi `@next/mdx`, `mdx-components.tsx`, 10 file MDX studi kasus (`id` & `en`), halaman detail `/projects/[slug]`, galeri screenshot + lightbox, navigasi prev/next, & halaman `not-found` selesai |
+| 2026-10-29 | 6 | Data `experience.ts`, `ExperienceSection` (timeline vertikal emerald), `ContactSection` (CTA besar, kanal sosial, & `CopyEmailButton` ke clipboard) selesai |
 
