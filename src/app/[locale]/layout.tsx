@@ -9,6 +9,8 @@ import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { profile } from "@/data/profile";
+import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 type Props = {
@@ -23,9 +25,47 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const title = t("title");
+  const description = t("description");
+
   return {
-    title: t("title"),
-    description: t("description"),
+    metadataBase: new URL(siteConfig.url),
+    title,
+    description,
+    authors: [{ name: profile.name, url: siteConfig.url }],
+    creator: profile.name,
+    keywords: [
+      profile.name,
+      "Fullstack Developer",
+      "Next.js Developer",
+      "Software Engineer",
+      "TypeScript",
+      "Laravel",
+      "Node.js",
+      "Web Developer Indonesia",
+    ],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        id: "/id",
+        en: "/en",
+        "x-default": "/id",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: locale === "id" ? "id_ID" : "en_US",
+      alternateLocale: locale === "id" ? ["en_US"] : ["id_ID"],
+      url: `/${locale}`,
+      siteName: `${profile.shortName} — ${profile.role}`,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

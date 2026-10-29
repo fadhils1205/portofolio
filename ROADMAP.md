@@ -91,7 +91,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | 5 | Halaman detail proyek (MDX) | ✅ | Berat |
 | 6 | Experience & Contact | ✅ | Ringan |
 | 7 | Animasi & polish | ✅ | Berat |
-| 8 | SEO & persiapan deploy | ⬜ | Ringan |
+| 8 | SEO & persiapan deploy | ✅ | Ringan |
 | 9 | Isi konten asli | ⬜ | Ringan |
 
 ---
@@ -195,13 +195,13 @@ Selesai jika: animasi terasa halus, tidak ada layout shift, Lighthouse performa 
 
 ---
 
-### ⬜ Batch 8 — SEO & persiapan deploy
+### ✅ Batch 8 — SEO & persiapan deploy
 Tugas:
-- [ ] Metadata lengkap per halaman & bahasa (`alternates.languages` untuk hreflang)
-- [ ] Open Graph image (`opengraph-image.tsx`)
-- [ ] `sitemap.ts` & `robots.ts`
-- [ ] Favicon / ikon
-- [ ] Panduan deploy Vercel di README
+- [x] Metadata lengkap per halaman & bahasa (`alternates.languages` untuk hreflang)
+- [x] Open Graph image (`opengraph-image.tsx`)
+- [x] `sitemap.ts` & `robots.ts`
+- [x] Favicon / ikon
+- [x] Panduan deploy Vercel di README
 
 ---
 
@@ -223,4 +223,5 @@ Tugas:
 | 2026-10-29 | 5 | Integrasi `@next/mdx`, `mdx-components.tsx`, 10 file MDX studi kasus (`id` & `en`), halaman detail `/projects/[slug]`, galeri screenshot + lightbox, navigasi prev/next, & halaman `not-found` selesai |
 | 2026-10-29 | 6 | Data `experience.ts`, `ExperienceSection` (timeline vertikal emerald), `ContactSection` (CTA besar, kanal sosial, & `CopyEmailButton` ke clipboard) selesai |
 | 2026-10-29 | 7 | Animasi & polish: `Reveal`/`StaggerGroup` (`motion/react`), `SpotlightCard`, transisi cover `layoutId` (`SharedProjectCover`), `ScrollProgress` bar, focus ring & `prefers-reduced-motion` selesai |
+| 2026-10-29 | 8 | SEO lengkap (`alternates.languages`, OpenGraph, Twitter Card), `opengraph-image.tsx`, `sitemap.ts`, `robots.ts`, `icon.svg`, & panduan deploy Vercel di `README.md` selesai |
 
