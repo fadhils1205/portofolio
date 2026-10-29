@@ -3,9 +3,46 @@
     "title": "Fadhil — Fullstack Developer",
     "description": "Portfolio of Fadhil, a Fullstack Developer building modern web applications from frontend to backend."
   },
-  "Placeholder": {
-    "heading": "Portfolio under construction",
-    "body": "Batch 1 complete: Next.js, Tailwind, and i18n are up and running."
+  "Nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "available": "Available for work",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "switchLang": "Switch language to {locale}"
+  },
+  "Footer": {
+    "tagline": "Building modern end-to-end web systems with precision.",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & Motion."
+  },
+  "Sections": {
+    "hero": {
+      "label": "00 / Introduction",
+      "title": "Fadhil — Fullstack Developer",
+      "placeholder": "Hero section skeleton (to be completed in Batch 3)."
+    },
+    "about": {
+      "label": "01 / About & Stack",
+      "title": "About Me",
+      "placeholder": "About & Tech Stack section skeleton (to be completed in Batch 3)."
+    },
+    "projects": {
+      "label": "02 / Selected Work",
+      "title": "Featured Projects",
+      "placeholder": "Projects section skeleton (to be populated with 5 bento cards in Batch 4)."
+    },
+    "experience": {
+      "label": "03 / Journey",
+      "title": "Experience",
+      "placeholder": "Experience section skeleton (to be populated with timeline in Batch 6)."
+    },
+    "contact": {
+      "label": "04 / Contact",
+      "title": "Let's Collaborate",
+      "placeholder": "Contact section skeleton (to be completed in Batch 6)."
+    }
   }
 }
-

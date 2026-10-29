@@ -3,9 +3,46 @@
     "title": "Fadhil — Fullstack Developer",
     "description": "Portofolio Fadhil, seorang Fullstack Developer yang membangun aplikasi web modern dari frontend hingga backend."
   },
-  "Placeholder": {
-    "heading": "Portofolio sedang dibangun",
-    "body": "Batch 1 selesai: Next.js, Tailwind, dan i18n sudah aktif."
+  "Nav": {
+    "about": "Tentang",
+    "projects": "Proyek",
+    "experience": "Pengalaman",
+    "contact": "Kontak",
+    "available": "Siap bekerja",
+    "openMenu": "Buka menu navigasi",
+    "closeMenu": "Tutup menu navigasi",
+    "switchLang": "Ganti bahasa ke {locale}"
+  },
+  "Footer": {
+    "tagline": "Membangun sistem web modern dari ujung ke ujung dengan presisi.",
+    "rights": "Hak cipta dilindungi.",
+    "builtWith": "Dibangun dengan Next.js, Tailwind CSS & Motion."
+  },
+  "Sections": {
+    "hero": {
+      "label": "00 / Perkenalan",
+      "title": "Fadhil — Fullstack Developer",
+      "placeholder": "Kerangka section Hero (akan diisi lengkap pada Batch 3)."
+    },
+    "about": {
+      "label": "01 / Tentang & Stack",
+      "title": "Tentang Saya",
+      "placeholder": "Kerangka section About & Tech Stack (akan diisi lengkap pada Batch 3)."
+    },
+    "projects": {
+      "label": "02 / Karya Pilihan",
+      "title": "Proyek Unggulan",
+      "placeholder": "Kerangka section Projects (akan diisi 5 kartu bento pada Batch 4)."
+    },
+    "experience": {
+      "label": "03 / Perjalanan",
+      "title": "Pengalaman",
+      "placeholder": "Kerangka section Experience (akan diisi timeline pada Batch 6)."
+    },
+    "contact": {
+      "label": "04 / Hubungi",
+      "title": "Mari Berkolaborasi",
+      "placeholder": "Kerangka section Contact (akan diisi lengkap pada Batch 6)."
+    }
   }
 }
-

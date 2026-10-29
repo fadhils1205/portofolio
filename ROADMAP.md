@@ -85,7 +85,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | # | Batch | Status | Rekomendasi model |
 |---|---|---|---|
 | 1 | Setup project | ✅ | — |
-| 2 | Layout dasar & navigasi | ⬜ | Sedang |
+| 2 | Layout dasar & navigasi | ✅ | Sedang |
 | 3 | Hero & About | ⬜ | Sedang |
 | 4 | Projects section (home) | ⬜ | Sedang |
 | 5 | Halaman detail proyek (MDX) | ⬜ | Berat |
@@ -104,17 +104,17 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 
 ---
 
-### ⬜ Batch 2 — Layout dasar & navigasi
+### ✅ Batch 2 — Layout dasar & navigasi
 **Tujuan:** kerangka halaman yang bisa di-scroll dengan navigasi lengkap.
 
 Tugas:
-- [ ] `src/components/layout/navbar.tsx` — sticky, latar blur saat di-scroll, link ke `#about #projects #experience #contact`, indikator section aktif, menu mobile (hamburger)
-- [ ] `src/components/layout/language-switcher.tsx` — toggle `ID / EN` memakai `useRouter`/`usePathname` dari `@/i18n/navigation` (tetap di halaman & hash yang sama)
-- [ ] `src/components/providers/smooth-scroll.tsx` — Lenis (`lenis/react`), klik link anchor scroll halus
-- [ ] `src/components/layout/footer.tsx` — copyright, link sosial
-- [ ] `src/components/ui/container.tsx` & `src/components/ui/section.tsx` (wrapper dengan `id`, padding, label section)
-- [ ] Kerangka kosong semua section di `src/components/sections/` lalu dirangkai di `page.tsx`
-- [ ] Semua teks via `messages/*.json` (namespace `Nav`, `Footer`)
+- [x] `src/components/layout/navbar.tsx` — sticky, latar blur saat di-scroll, link ke `#about #projects #experience #contact`, indikator section aktif, menu mobile (hamburger)
+- [x] `src/components/layout/language-switcher.tsx` — toggle `ID / EN` memakai `useRouter`/`usePathname` dari `@/i18n/navigation` (tetap di halaman & hash yang sama)
+- [x] `src/components/providers/smooth-scroll.tsx` — Lenis (`lenis/react`), klik link anchor scroll halus
+- [x] `src/components/layout/footer.tsx` — copyright, link sosial
+- [x] `src/components/ui/container.tsx` & `src/components/ui/section.tsx` (wrapper dengan `id`, padding, label section)
+- [x] Kerangka kosong semua section di `src/components/sections/` lalu dirangkai di `page.tsx`
+- [x] Semua teks via `messages/*.json` (namespace `Nav`, `Footer`)
 
 Selesai jika: navigasi & ganti bahasa berfungsi di desktop + mobile, build sukses.
 
@@ -217,4 +217,5 @@ Tugas:
 | Tanggal | Batch | Catatan |
 |---|---|---|
 | 2026-10-29 | 1 | Setup selesai, palet Cyber Emerald diterapkan |
+| 2026-10-29 | 2 | Layout dasar, Navbar sticky + active spy, Language Switcher, Smooth Scroll (Lenis), Footer & kerangka semua section selesai |
 
