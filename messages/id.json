@@ -65,6 +65,28 @@
     "stackLabel": "Teknologi yang digunakan",
     "viewDetail": "Baca studi kasus"
   },
+  "ProjectDetail": {
+    "metaSuffix": "Studi Kasus Proyek",
+    "backToProjects": "Kembali ke daftar proyek",
+    "caseStudyBadge": "Studi Kasus",
+    "roleLabel": "Peran",
+    "yearLabel": "Tahun",
+    "stackLabel": "Tech Stack",
+    "liveDemo": "Buka Live Demo",
+    "sourceCode": "Kode Sumber",
+    "galleryLabel": "Visual & Antarmuka",
+    "galleryTitle": "Galeri Tangkapan Layar",
+    "galleryHint": "Klik gambar untuk memperbesar",
+    "closeGallery": "Tutup pratinjau gambar",
+    "navAriaLabel": "Navigasi proyek lainnya",
+    "prevProject": "Proyek Sebelumnya",
+    "nextProject": "Proyek Berikutnya"
+  },
+  "NotFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Maaf, halaman atau proyek yang Anda cari tidak tersedia atau telah dipindahkan.",
+    "backHome": "Kembali ke Beranda"
+  },
   "Sections": {
     "experience": {
       "label": "03 / Perjalanan",

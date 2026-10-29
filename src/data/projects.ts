@@ -1,3 +1,8 @@
+export type ProjectScreenshot = {
+  src: string;
+  caption: { id: string; en: string };
+};
+
 export type Project = {
   slug: string;
   year: number;
@@ -8,6 +13,7 @@ export type Project = {
   title: { id: string; en: string };
   summary: { id: string; en: string };
   role: { id: string; en: string };
+  screenshots?: ProjectScreenshot[];
 };
 
 export const projects: Project[] = [
@@ -33,6 +39,22 @@ export const projects: Project[] = [
       id: "Fullstack Developer",
       en: "Fullstack Developer",
     },
+    screenshots: [
+      {
+        src: "/images/projects/enterprise-sso-portal/cover.svg",
+        caption: {
+          id: "Gerbang autentikasi terpusat & pemilihan aplikasi",
+          en: "Centralized authentication gateway & app launcher",
+        },
+      },
+      {
+        src: "/images/projects/realtime-session-dashboard/cover.svg",
+        caption: {
+          id: "Panel manajemen peran (RBAC) & log audit sesi",
+          en: "Role management (RBAC) & session audit trail panel",
+        },
+      },
+    ],
   },
   {
     slug: "stock-ocr-monitoring",
@@ -56,6 +78,22 @@ export const projects: Project[] = [
       id: "Fullstack Developer",
       en: "Fullstack Developer",
     },
+    screenshots: [
+      {
+        src: "/images/projects/stock-ocr-monitoring/cover.svg",
+        caption: {
+          id: "Pemindaian label part & validasi kode stok otomatis",
+          en: "Part label scanning & automated stock code validation",
+        },
+      },
+      {
+        src: "/images/projects/digital-budget-planning/cover.svg",
+        caption: {
+          id: "Rekapitulasi selisih stok fisik terhadap data ERP",
+          en: "Discrepancy report comparing physical inventory with ERP data",
+        },
+      },
+    ],
   },
   {
     slug: "whatsapp-tracking-middleware",
@@ -78,6 +116,22 @@ export const projects: Project[] = [
       id: "Backend Engineer",
       en: "Backend Engineer",
     },
+    screenshots: [
+      {
+        src: "/images/projects/whatsapp-tracking-middleware/cover.svg",
+        caption: {
+          id: "Alur antrean pesan & mekanisme webhook retry",
+          en: "Message queue pipeline & webhook retry mechanism",
+        },
+      },
+      {
+        src: "/images/projects/realtime-session-dashboard/cover.svg",
+        caption: {
+          id: "Metrik throughput pengiriman & status pesan",
+          en: "Delivery throughput metrics & message status logs",
+        },
+      },
+    ],
   },
   {
     slug: "realtime-session-dashboard",
@@ -101,6 +155,22 @@ export const projects: Project[] = [
       id: "Frontend Developer",
       en: "Frontend Developer",
     },
+    screenshots: [
+      {
+        src: "/images/projects/realtime-session-dashboard/cover.svg",
+        caption: {
+          id: "Grafik latensi WebSocket & status node aktif",
+          en: "WebSocket latency telemetry & active node status",
+        },
+      },
+      {
+        src: "/images/projects/enterprise-sso-portal/cover.svg",
+        caption: {
+          id: "Panel pemulihan sesi & pemicu koneksi ulang instan",
+          en: "Session recovery panel & instant reconnect trigger",
+        },
+      },
+    ],
   },
   {
     slug: "digital-budget-planning",
@@ -123,6 +193,22 @@ export const projects: Project[] = [
       id: "Fullstack Developer",
       en: "Fullstack Developer",
     },
+    screenshots: [
+      {
+        src: "/images/projects/digital-budget-planning/cover.svg",
+        caption: {
+          id: "Grafik perbandingan pagu anggaran vs realisasi bulanan",
+          en: "Monthly budget allocation vs actual realization chart",
+        },
+      },
+      {
+        src: "/images/projects/stock-ocr-monitoring/cover.svg",
+        caption: {
+          id: "Alur persetujuan berjenjang lintas departemen",
+          en: "Multi-tier approval workflow across departments",
+        },
+      },
+    ],
   },
 ];
 
@@ -130,3 +216,14 @@ export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
 }
 
+export function getAdjacentProjects(slug: string): {
+  prev: Project | null;
+  next: Project | null;
+} {
+  const index = projects.findIndex((project) => project.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+
+  const prev = index > 0 ? projects[index - 1] : projects[projects.length - 1];
+  const next = index < projects.length - 1 ? projects[index + 1] : projects[0];
+  return { prev, next };
+}

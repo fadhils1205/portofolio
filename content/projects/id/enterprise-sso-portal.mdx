@@ -1,0 +1,31 @@
+## Ringkasan Proyek
+
+**Portal Autentikasi Terpusat (SSO)** dirancang sebagai gerbang identitas tunggal untuk seluruh aplikasi internal perusahaan. Sebelumnya, karyawan harus mengelola banyak akun terpisah untuk sistem HR, inventaris, dan pelaporan keuangan.
+
+## Permasalahan (Problem)
+
+- Setiap aplikasi internal memiliki database pengguna dan mekanisme login tersendiri, memicu duplikasi data serta celah keamanan.
+- Tim IT kesulitan mencabut atau memperbarui hak akses karyawan yang berpindah divisi secara serentak.
+- Tidak adanya pencatatan audit (*audit trail*) terpusat untuk memantau aktivitas masuk dan sesi aktif lintas aplikasi.
+
+## Solusi (Solution)
+
+Membangun layanan **Identity Provider (IdP)** terpusat berbasis **Next.js** dan **NextAuth** dengan skema token terenkripsi serta matriks izin berbasis peran (**RBAC**). Seluruh aplikasi internal dihubungkan melalui mekanisme token terverifikasi sehingga pengguna cukup login satu kali.
+
+## Fitur Utama
+
+- **Single Sign-On & Single Logout:** Masuk satu kali untuk mengakses seluruh portal internal, serta pemutusan sesi serentak dari satu tombol.
+- **Role-Based Access Control (RBAC):** Pengaturan hak akses granular per divisi, jabatan, dan modul aplikasi.
+- **Manajemen Sesi Aktif:** Pemantauan perangkat yang sedang login beserta fitur pencabutan sesi jarak jauh (*remote session revocation*).
+- **Audit Log Keamanan:** Pencatatan otomatis setiap percobaan login, perubahan hak akses, dan aktivitas sensitif.
+
+## Arsitektur Teknis
+
+Sistem menggunakan **Next.js App Router** sebagai layanan inti autentikasi dan dashboard manajemen. Data pengguna, peran, serta log disimpan di **PostgreSQL** dengan skema relasional yang ketat, sementara validasi token dilakukan pada lapisan *middleware* sebelum meneruskan permintaan ke aplikasi tujuan.
+
+## Hasil & Dampak
+
+- Memangkas waktu *onboarding* akun karyawan baru hingga **70%**.
+- Mengurangi tiket bantuan reset kata sandi secara drastis karena konsolidasi kredensial.
+- Meningkatkan visibilitas keamanan internal melalui log audit yang terstandarisasi.
+

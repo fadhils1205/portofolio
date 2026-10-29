@@ -65,6 +65,28 @@
     "stackLabel": "Technologies used",
     "viewDetail": "Read case study"
   },
+  "ProjectDetail": {
+    "metaSuffix": "Project Case Study",
+    "backToProjects": "Back to all projects",
+    "caseStudyBadge": "Case Study",
+    "roleLabel": "Role",
+    "yearLabel": "Year",
+    "stackLabel": "Tech Stack",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "galleryLabel": "Interface & Visuals",
+    "galleryTitle": "Screenshot Gallery",
+    "galleryHint": "Click an image to enlarge",
+    "closeGallery": "Close image preview",
+    "navAriaLabel": "Other projects navigation",
+    "prevProject": "Previous Project",
+    "nextProject": "Next Project"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page or project you are looking for does not exist or has been moved.",
+    "backHome": "Back to Home"
+  },
   "Sections": {
     "experience": {
       "label": "03 / Journey",

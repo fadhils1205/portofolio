@@ -1,0 +1,31 @@
+## Overview
+
+The **Centralized Enterprise SSO Portal** serves as a unified identity gateway across all internal company applications. Previously, employees had to manage separate credentials for HR, inventory, and financial reporting systems.
+
+## Problem
+
+- Internal applications maintained isolated user tables and login flows, leading to data duplication and security blind spots.
+- IT administrators struggled to revoke or update access permissions simultaneously when employees changed roles.
+- There was no centralized audit trail to monitor login events and active sessions across internal tools.
+
+## Solution
+
+Built a centralized **Identity Provider (IdP)** portal using **Next.js** and **NextAuth** backed by encrypted session tokens and a **Role-Based Access Control (RBAC)** permission matrix. Internal applications authenticate against this gateway so users sign in only once.
+
+## Key Features
+
+- **Single Sign-On & Single Logout:** One login grants access to all authorized internal apps, with instant global session termination.
+- **Role-Based Access Control (RBAC):** Granular permission assignment by department, role, and application module.
+- **Active Session Management:** Real-time visibility into connected devices with remote session revocation.
+- **Security Audit Logs:** Automated recording of login attempts, permission changes, and administrative actions.
+
+## Technical Architecture
+
+Built on **Next.js App Router** for both the authentication endpoints and management interface. User identities, roles, and audit events are stored in **PostgreSQL** with strict relational integrity, while token verification runs at the middleware layer before forwarding requests.
+
+## Results & Impact
+
+- Reduced new-hire account provisioning time by **70%**.
+- Significantly lowered password-reset support tickets by consolidating credentials.
+- Improved security compliance through standardized, searchable audit logs.
+

@@ -1,0 +1,31 @@
+## Overview
+
+The **Stock Opname OCR Monitoring System** is an internal web application designed to accelerate physical warehouse inventory counting and **ERP** reconciliation through automated label scanning.
+
+## Problem
+
+- Physical stock counts were recorded manually on paper and re-entered into spreadsheets, introducing frequent transcription errors.
+- Reconciling thousands of spare-part SKUs took several days before discrepancy reports could be finalized.
+- Supervisors lacked real-time visibility into counting progress per rack or operator.
+
+## Solution
+
+Developed a **Laravel** web platform integrated with an **OCR API** pipeline that extracts part numbers and quantities directly from captured warehouse labels and automatically cross-checks them against master inventory records.
+
+## Key Features
+
+- **OCR Label Extraction:** Reads serial numbers, part codes, and quantities directly from mobile camera captures.
+- **Automated Discrepancy Detection:** Immediately flags mismatches between physical counts and system balances.
+- **Live Opname Progress Dashboard:** Tracks completion percentages across warehouse zones in real time.
+- **Audit-Ready Exports:** Generates structured reconciliation reports in PDF and Excel formats.
+
+## Technical Architecture
+
+Powered by **Laravel** and **MySQL** to handle high-volume inventory transactions. Uploaded label images are processed via a **REST API** OCR service, normalized through regex validation rules, and persisted with full operator timestamps.
+
+## Results & Impact
+
+- Accelerated monthly stock opname cycles by **2.5×**.
+- Dramatically reduced SKU transcription errors during warehouse audits.
+- Provided warehouse supervisors with live operational visibility.
+

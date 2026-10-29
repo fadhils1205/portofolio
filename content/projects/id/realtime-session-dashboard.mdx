@@ -1,0 +1,30 @@
+## Ringkasan Proyek
+
+**Dashboard Pemantauan Sesi Real-time** adalah panel kontrol observabilitas untuk memantau kesehatan koneksi *worker*, laju antrean pesan, serta memulihkan sesi yang terputus tanpa perlu akses ke server melalui terminal.
+
+## Permasalahan (Problem)
+
+- Administrator sebelumnya harus memeriksa log server melalui SSH untuk mengetahui apakah sesi worker masih aktif.
+- Keterlambatan mendeteksi sesi yang terputus menyebabkan penumpukan antrean notifikasi operasional.
+- Tidak adanya visualisasi metrik latensi dan kapasitas pemrosesan secara *real-time*.
+
+## Solusi (Solution)
+
+Merancang aplikasi dashboard interaktif berbasis **React** dan **TypeScript** yang terhubung melalui **WebSocket** ke layanan *middleware* untuk menampilkan telemetri langsung serta menyediakan kontrol pemulihan instan.
+
+## Fitur Utama
+
+- **Pemantauan Status Live:** Indikator status koneksi setiap node worker yang diperbarui secara langsung via WebSocket.
+- **Pemulihan Sesi Instan:** Fitur *reconnect* dan pemindaian ulang autentikasi sesi langsung dari antarmuka web.
+- **Visualisasi Metrik & Latensi:** Grafik *throughput* pesan per menit dan waktu respons endpoint API.
+- **Filter Log Interaktif:** Pencarian cepat riwayat error dan kejadian sistem berdasarkan rentang waktu.
+
+## Arsitektur Teknis
+
+Dibangun menggunakan **React**, **TypeScript**, dan **Tailwind CSS**. Manajemen state sinkronisasi data *real-time* memanfaatkan koneksi **WebSocket** dengan mekanisme *auto-reconnect*, dipadukan dengan pemanggilan **REST API** untuk aksi administratif.
+
+## Hasil & Dampak
+
+- Waktu deteksi dan pemulihan insiden (*Mean Time to Recovery*) turun dari puluhan menit menjadi **kurang dari 1 menit**.
+- Memungkinkan tim operasional memantau kesehatan sistem secara mandiri tanpa intervensi developer backend.
+

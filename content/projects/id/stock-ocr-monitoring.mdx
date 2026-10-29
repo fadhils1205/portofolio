@@ -1,0 +1,31 @@
+## Ringkasan Proyek
+
+**Sistem Pemantauan Stok Opname OCR** adalah aplikasi web internal untuk mempercepat proses pencatatan dan rekonsiliasi stok fisik di gudang terhadap data **ERP** menggunakan pemindaian label otomatis.
+
+## Permasalahan (Problem)
+
+- Pencatatan stok opname dilakukan secara manual menggunakan kertas dan input ulang ke spreadsheet, sehingga rawan salah ketik (*human error*).
+- Rekonsiliasi ribuan item suku cadang membutuhkan waktu berhari-hari sebelum laporan selisih stok dapat diterbitkan.
+- Sulit melacak riwayat verifikasi per rak atau per petugas secara *real-time*.
+
+## Solusi (Solution)
+
+Mengembangkan sistem berbasis **Laravel** yang terintegrasi dengan layanan **OCR API** untuk membaca kode part dan kuantitas langsung dari foto label gudang, lalu membandingkannya secara otomatis dengan master data stok.
+
+## Fitur Utama
+
+- **Ekstraksi Label via OCR:** Membaca nomor seri, kode part, dan jumlah barang dari tangkapan kamera perangkat petugas.
+- **Deteksi Selisih Otomatis:** Menandai secara instan apabila jumlah fisik tidak sesuai dengan saldo sistem.
+- **Dashboard Progres Opname:** Memantau persentase area gudang yang sudah diperiksa secara *real-time*.
+- **Ekspor Laporan Rekonsiliasi:** Menghasilkan laporan siap audit dalam format PDF dan Excel.
+
+## Arsitektur Teknis
+
+Backend dibangun dengan **Laravel** dan **MySQL** untuk menangani transaksi stok berjumlah besar. Proses ekstraksi gambar dikirim melalui endpoint **REST API** ke mesin OCR, kemudian hasilnya dinormalisasi menggunakan aturan validasi regex sebelum disimpan ke tabel opname.
+
+## Hasil & Dampak
+
+- Mempercepat siklus stok opname bulanan hingga **2,5× lebih cepat**.
+- Menekan tingkat kesalahan input kode barang secara signifikan.
+- Memberikan transparansi penuh bagi supervisor gudang melalui pemantauan langsung.
+

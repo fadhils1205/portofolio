@@ -1,0 +1,31 @@
+## Overview
+
+The **Digitalized Master Budget System** is an internal web platform created to replace fragmented spreadsheet-based annual budget planning, multi-stage approvals, and expense tracking across departments.
+
+## Problem
+
+- Consolidating departmental budgets took weeks due to inconsistent spreadsheet templates and back-and-forth email revisions.
+- Department heads lacked real-time visibility into remaining budget allocations when reviewing new expense requests.
+- Multi-tier approval histories were difficult to trace during internal financial audits.
+
+## Solution
+
+Built a centralized **Laravel** and **MySQL** web application that standardizes budget cost centers, automates multi-level approval workflows, and visualizes budget-versus-actual variance in real time.
+
+## Key Features
+
+- **Structured Budget Planning:** Standardized cost-center and monthly allocation inputs with automated ceiling validation.
+- **Multi-Tier Approval Workflow:** Role-based sign-off pipeline from section leads and department managers to finance controllers.
+- **Realization & Variance Tracking:** Automated calculation of budget utilization and variance percentages.
+- **Executive Analytics Dashboard:** Interactive **Chart.js** visualizations of departmental spending trends.
+
+## Technical Architecture
+
+Engineered with **Laravel** and **MySQL** using transactional database operations. All budget revisions and approval transitions are stored in immutable audit tables to preserve historical accuracy.
+
+## Results & Impact
+
+- Cut annual budget consolidation time by **60%**.
+- Prevented over-budget allocations through automated threshold checks during submission.
+- Established a clear, auditable digital approval trail across all departments.
+

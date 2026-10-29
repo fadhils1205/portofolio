@@ -1,0 +1,31 @@
+## Ringkasan Proyek
+
+**Headless WhatsApp Tracking Middleware** adalah layanan *backend* tanpa antarmuka (*headless*) yang bertugas mengelola antrean pengiriman pesan operasional, melacak status keterbacaan, dan menjamin keandalan distribusi webhook.
+
+## Permasalahan (Problem)
+
+- Pengiriman notifikasi langsung dari aplikasi utama sering mengalami kegagalan saat terjadi lonjakan trafik (*burst traffic*).
+- Tidak ada mekanisme *retry* otomatis ketika sesi gateway terputus sementara.
+- Tim pengembang kesulitan menelusuri apakah pesan penting (OTP, pengingat persetujuan, alert sistem) benar-benar sampai ke penerima.
+
+## Solusi (Solution)
+
+Membangun arsitektur *middleware* terpisah berbasis **Node.js**, **Express.js**, dan **Redis** yang bertindak sebagai pengatur antrean (*message broker*) sekaligus pencatat siklus hidup setiap pesan di **PostgreSQL**.
+
+## Fitur Utama
+
+- **Antrean Pesan Berprioritas:** Memisahkan jalur pesan kritis (OTP/Alert) dari pesan broadcast reguler.
+- **Exponential Backoff Retry:** Mengulang pengiriman secara terjadwal apabila terjadi gangguan jaringan.
+- **Pelacakan Siklus Pesan:** Mencatat status `queued`, `sent`, `delivered`, `read`, hingga `failed` secara akurat.
+- **Integrasi Multi-Aplikasi:** Menyediakan REST API berautentikasi API-Key yang mudah dikonsumsi berbagai sistem internal.
+
+## Arsitektur Teknis
+
+Menggunakan **Node.js** dan **Express.js** dengan **Prisma ORM** di atas **PostgreSQL**. Antrean asinkron dikelola menggunakan **Redis** untuk memastikan respons API tetap di bawah `50ms` meskipun memproses ribuan permintaan pengiriman.
+
+## Hasil & Dampak
+
+- Tingkat keberhasilan pengiriman pesan operasional meningkat hingga **99,4%**.
+- Menghilangkan beban pemrosesan sinkron pada aplikasi utama perusahaan.
+- Memudahkan investigasi kendala pengiriman melalui log terstruktur.
+

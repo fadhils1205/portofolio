@@ -88,7 +88,7 @@ Rekomendasi model: **Ringan** (model cepat/murah) · **Sedang** · **Berat** (mo
 | 2 | Layout dasar & navigasi | ✅ | Sedang |
 | 3 | Hero & About | ✅ | Sedang |
 | 4 | Projects section (home) | ✅ | Sedang |
-| 5 | Halaman detail proyek (MDX) | ⬜ | Berat |
+| 5 | Halaman detail proyek (MDX) | ✅ | Berat |
 | 6 | Experience & Contact | ⬜ | Ringan |
 | 7 | Animasi & polish | ⬜ | Berat |
 | 8 | SEO & persiapan deploy | ⬜ | Ringan |
@@ -158,15 +158,15 @@ Selesai jika: 5 kartu tampil, link mengarah ke URL detail yang benar.
 
 ---
 
-### ⬜ Batch 5 — Halaman detail proyek (MDX)
+### ✅ Batch 5 — Halaman detail proyek (MDX)
 Tugas:
-- [ ] Aktifkan `@next/mdx` di `next.config.ts` (gabung dengan plugin next-intl) + `mdx-components.tsx` di root/`src` dengan styling tipografi gelap
-- [ ] Konten: `content/projects/{id,en}/<slug>.mdx` — bagian Overview, Problem, Solution, Fitur, Arsitektur, Hasil
-- [ ] `src/app/[locale]/projects/[slug]/page.tsx` — import MDX dinamis, `generateStaticParams` (semua locale × slug), `dynamicParams = false`, `generateMetadata`
-- [ ] Header detail: cover, judul, tahun, peran, badge stack, tombol Demo/Repo, tombol kembali
-- [ ] Komponen galeri screenshot
-- [ ] Navigasi proyek sebelumnya / berikutnya
-- [ ] Halaman `not-found` bergaya sama
+- [x] Aktifkan `@next/mdx` di `next.config.ts` (gabung dengan plugin next-intl) + `mdx-components.tsx` di root/`src` dengan styling tipografi gelap
+- [x] Konten: `content/projects/{id,en}/<slug>.mdx` — bagian Overview, Problem, Solution, Fitur, Arsitektur, Hasil
+- [x] `src/app/[locale]/projects/[slug]/page.tsx` — import MDX dinamis, `generateStaticParams` (semua locale × slug), `dynamicParams = false`, `generateMetadata`
+- [x] Header detail: cover, judul, tahun, peran, badge stack, tombol Demo/Repo, tombol kembali
+- [x] Komponen galeri screenshot
+- [x] Navigasi proyek sebelumnya / berikutnya
+- [x] Halaman `not-found` bergaya sama
 
 Selesai jika: kelima proyek punya halaman detail statis di dua bahasa.
 
@@ -220,4 +220,5 @@ Tugas:
 | 2026-10-29 | 2 | Layout dasar, Navbar sticky + active spy, Language Switcher, Smooth Scroll (Lenis), Footer & kerangka semua section selesai |
 | 2026-10-29 | 3 | Hero (badge neon, grid + cursor spotlight, CTA, system card) & About (foto placeholder, bio, metrik neon, tech stack 4 kategori) selesai |
 | 2026-10-29 | 4 | Data 5 proyek bilingual (`projects.ts`), ilustrasi cover SVG, `ProjectCard` (hover zoom + emerald glow), & Bento Grid responsif selesai |
+| 2026-10-29 | 5 | Integrasi `@next/mdx`, `mdx-components.tsx`, 10 file MDX studi kasus (`id` & `en`), halaman detail `/projects/[slug]`, galeri screenshot + lightbox, navigasi prev/next, & halaman `not-found` selesai |
 

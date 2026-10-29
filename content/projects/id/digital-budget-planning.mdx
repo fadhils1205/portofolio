@@ -1,0 +1,31 @@
+## Ringkasan Proyek
+
+**Sistem Digitalisasi Master Budget** adalah platform web internal untuk menggantikan proses penyusunan, pengajuan, dan pengendalian anggaran tahunan antar departemen yang sebelumnya tersebar di puluhan file spreadsheet.
+
+## Permasalahan (Problem)
+
+- Konsolidasi anggaran dari berbagai departemen memakan waktu lama karena perbedaan format file Excel dan revisi berulang via email.
+- Sulit melacak sisa pagu anggaran secara *real-time* ketika ada pengajuan biaya baru.
+- Alur persetujuan (*approval*) berjenjang kurang terdokumentasi sehingga menghambat proses audit internal.
+
+## Solusi (Solution)
+
+Membangun aplikasi web terpusat berbasis **Laravel** dan **MySQL** yang menstandarkan struktur mata anggaran, mengotomatisasi alur persetujuan berjenjang, serta menyajikan grafik perbandingan pagu vs realisasi secara langsung.
+
+## Fitur Utama
+
+- **Penyusunan Master Budget Terstruktur:** Input anggaran per pos biaya dan periode bulanan dengan validasi pagu otomatis.
+- **Alur Persetujuan Berjenjang:** Mekanisme *approval* dari tingkat kepala seksi, manajer departemen, hingga divisi keuangan.
+- **Pelacakan Realisasi & Varians:** Perhitungan otomatis selisih antara rencana anggaran dan penggunaan aktual.
+- **Dashboard Analitik Keuangan:** Visualisasi serapan anggaran menggunakan grafik interaktif **Chart.js**.
+
+## Arsitektur Teknis
+
+Menggunakan **Laravel** dengan arsitektur MVC yang bersih dan database **MySQL**. Setiap perubahan nilai anggaran dicatat dalam tabel *versioning* dan *approval log* untuk menjaga integritas data historis.
+
+## Hasil & Dampak
+
+- Memangkas waktu konsolidasi anggaran tahunan hingga **60%**.
+- Mencegah kelebihan serapan (*over-budget*) melalui validasi batas pagu otomatis saat pengajuan.
+- Menyediakan jejak persetujuan digital yang transparan untuk kebutuhan audit.
+

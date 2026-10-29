@@ -1,0 +1,30 @@
+## Overview
+
+The **Real-time Session Monitoring Dashboard** is an observability control panel built to monitor worker connection health, message queue throughput, and recover disconnected sessions without requiring SSH server access.
+
+## Problem
+
+- Administrators previously had to inspect server logs via SSH to determine whether worker sessions were still active.
+- Delayed detection of dropped sessions caused operational notification queues to back up.
+- There was no real-time visualization for API latency or queue processing capacity.
+
+## Solution
+
+Designed an interactive **React** and **TypeScript** dashboard connected via **WebSocket** to the middleware service, streaming live telemetry and providing one-click session recovery controls.
+
+## Key Features
+
+- **Live Node Telemetry:** Real-time connection status indicators for every worker instance streamed over WebSocket.
+- **Instant Session Recovery:** Trigger session reconnections and QR/token re-authentication directly from the browser.
+- **Throughput & Latency Charts:** Visual metrics tracking messages processed per minute and endpoint response times.
+- **Interactive Log Explorer:** Fast filtering of system events and error traces by status and time window.
+
+## Technical Architecture
+
+Developed with **React**, **TypeScript**, and **Tailwind CSS**. Real-time state synchronization relies on resilient **WebSocket** streams with automatic reconnection, paired with **REST API** mutations for administrative commands.
+
+## Results & Impact
+
+- Reduced Mean Time to Recovery (MTTR) for dropped sessions from tens of minutes to **under 1 minute**.
+- Empowered operations teams to manage session health independently without backend developer intervention.
+

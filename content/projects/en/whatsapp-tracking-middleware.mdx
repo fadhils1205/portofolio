@@ -1,0 +1,31 @@
+## Overview
+
+The **Headless WhatsApp Tracking Middleware** is a backend service engineered to orchestrate operational message queues, track delivery receipts, and guarantee reliable webhook distribution across internal systems.
+
+## Problem
+
+- Sending notifications synchronously from core applications caused timeouts and dropped messages during traffic spikes.
+- Temporary gateway disconnections resulted in lost notifications with no automated recovery mechanism.
+- Engineering teams lacked visibility into whether critical alerts, OTPs, and approval reminders actually reached recipients.
+
+## Solution
+
+Built a standalone middleware service using **Node.js**, **Express.js**, and **Redis** that acts as an asynchronous message broker while recording the complete lifecycle of every message in **PostgreSQL**.
+
+## Key Features
+
+- **Priority Message Queuing:** Separates high-priority transactional alerts from bulk operational broadcasts.
+- **Exponential Backoff Retries:** Automatically reschedules failed deliveries when downstream gateways experience instability.
+- **End-to-End Lifecycle Tracking:** Accurately logs `queued`, `sent`, `delivered`, `read`, and `failed` states.
+- **Multi-Tenant API Access:** Exposes API-key authenticated REST endpoints for seamless integration across internal apps.
+
+## Technical Architecture
+
+Built with **Node.js**, **Express.js**, and **Prisma ORM** backed by **PostgreSQL**. **Redis** handles asynchronous job queues so API ingestion endpoints consistently respond in under `50ms` even under heavy load.
+
+## Results & Impact
+
+- Achieved a **99.4%** delivery success rate for critical operational notifications.
+- Decoupled notification workloads from primary business applications.
+- Simplified incident debugging with structured, searchable delivery logs.
+
