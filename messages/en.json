@@ -58,7 +58,7 @@
     }
   },
   "Projects": {
-    "label": "02 / Selected Work",
+    "label": "03 / Selected Work",
     "title": "Featured Projects",
     "subtitle": "A selection of web systems, enterprise portals, and middlewares designed and built from architecture to production.",
     "featuredBadge": "Featured",
@@ -83,7 +83,7 @@
     "nextProject": "Next Project"
   },
   "Experience": {
-    "label": "03 / Journey",
+    "label": "02 / Journey",
     "title": "Experience & Engineering Track",
     "subtitle": "Professional roles, industrial projects, and information system engineering milestones along my journey.",
     "currentBadge": "Active"

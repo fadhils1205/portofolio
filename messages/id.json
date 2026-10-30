@@ -58,7 +58,7 @@
     }
   },
   "Projects": {
-    "label": "02 / Karya Pilihan",
+    "label": "03 / Karya Pilihan",
     "title": "Proyek Unggulan",
     "subtitle": "Pilihan sistem web, portal enterprise, dan middleware yang saya rancang serta kembangkan dari awal hingga produksi.",
     "featuredBadge": "Unggulan",
@@ -83,7 +83,7 @@
     "nextProject": "Proyek Berikutnya"
   },
   "Experience": {
-    "label": "03 / Perjalanan",
+    "label": "02 / Perjalanan",
     "title": "Pengalaman & Jejak Rekayasa",
     "subtitle": "Riwayat peran profesional, proyek industri, dan pengembangan sistem informasi yang pernah saya jalani.",
     "currentBadge": "Aktif"

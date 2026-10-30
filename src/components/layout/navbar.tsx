@@ -10,8 +10,8 @@ import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { id: "about", key: "about" },
-  { id: "projects", key: "projects" },
   { id: "experience", key: "experience" },
+  { id: "projects", key: "projects" },
   { id: "contact", key: "contact" },
 ] as const;
 

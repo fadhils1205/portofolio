@@ -18,8 +18,8 @@ export default function HomePage({ params }: Props) {
     <main>
       <HeroSection />
       <AboutSection />
-      <ProjectsSection />
       <ExperienceSection />
+      <ProjectsSection />
       <ContactSection />
     </main>
   );

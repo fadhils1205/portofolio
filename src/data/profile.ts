@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Fadhil Sulton",
+  name: "Muhammad Fadhil Sulton",
   shortName: "Fadhil",
   handle: "fadhil.dev",
   role: "Fullstack Developer",
@@ -9,7 +9,7 @@ export const profile = {
   avatar: "/images/profile-placeholder.svg",
   socials: {
     github: "https://github.com/fadhils",
-    linkedin: "https://linkedin.com/in/fadhils",
+    linkedin: "www.linkedin.com/in/muhammad-fadhil-sulton-939932320",
     email: "mailto:hello@fadhil.dev",
   },
   metrics: [
