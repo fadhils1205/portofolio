@@ -52,7 +52,7 @@ export function HeroSpotlight({ children, className }: HeroSpotlightProps) {
         }}
       />
 
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 w-full">{children}</div>
     </div>
   );
 }

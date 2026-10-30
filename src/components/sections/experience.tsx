@@ -17,7 +17,7 @@ export function ExperienceSection() {
       title={t("title")}
       subtitle={t("subtitle")}
     >
-      <div className="relative mx-auto max-w-4xl">
+      <div className="relative mx-auto max-w-4xl xl:max-w-5xl">
         {/* Vertical Emerald Line */}
         <div
           aria-hidden="true"

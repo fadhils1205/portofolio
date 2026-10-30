@@ -72,12 +72,12 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4">
+      <Container className="flex h-16 items-center justify-between gap-4 xl:h-20">
         {/* Brand / Logo */}
         <Link
           href={isHome ? "#hero" : "/"}
           onClick={() => setMobileOpen(false)}
-          className="group inline-flex items-center gap-2.5 font-mono text-sm font-semibold tracking-tight text-foreground"
+          className="group inline-flex items-center gap-2.5 font-mono text-sm font-semibold tracking-tight text-foreground xl:text-base"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-neon opacity-75" />
@@ -102,7 +102,7 @@ export function Navbar() {
                 href={href}
                 aria-current={isActive ? "location" : undefined}
                 className={cn(
-                  "relative rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors",
+                  "relative rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors xl:px-4 xl:py-2 xl:text-sm",
                   isActive
                     ? "bg-accent-glow text-accent-neon shadow-[inset_0_0_0_1px_var(--color-accent)]"
                     : "text-muted hover:text-foreground"

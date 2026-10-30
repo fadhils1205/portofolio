@@ -32,19 +32,19 @@ export function Section({
     >
       <Container className={containerClassName}>
         {(label || title || subtitle) && (
-          <Reveal className="mb-12 max-w-2xl space-y-3">
+          <Reveal className="mb-12 max-w-2xl space-y-3 xl:mb-14 xl:max-w-3xl">
             {label && (
-              <p className="font-mono text-xs uppercase tracking-widest text-accent">
+              <p className="font-mono text-xs uppercase tracking-widest text-accent 2xl:text-sm">
                 {label}
               </p>
             )}
             {title && (
-              <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl xl:text-4xl">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-sm leading-relaxed text-muted sm:text-base">
+              <p className="text-sm leading-relaxed text-muted sm:text-base xl:text-lg">
                 {subtitle}
               </p>
             )}
